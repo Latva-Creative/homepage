@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorem Ipsum</title>
+    <style>
+      :root {
+        color: #453640;
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        background: linear-gradient(120deg, #fffafc, #f8bdcf, #bde9cb, #ffffff);
+        background-size: 300% 300%;
+        animation: drift 10s ease-in-out infinite alternate;
+      }
+
+      h1 {
+        margin: 0;
+        padding: 0.8rem 1.25rem;
+        font-size: clamp(3rem, 10vw, 7rem);
+        font-weight: 400;
+        letter-spacing: 0;
+        text-align: center;
+        text-shadow: 0 2px 20px rgb(255 255 255 / 60%);
+      }
+
+      @keyframes drift {
+        from {
+          background-position: 0% 50%;
+        }
+
+        to {
+          background-position: 100% 50%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        body {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum</h1>
+  </body>
+</html>
