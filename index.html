@@ -1,13 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="fi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lorem Ipsum</title>
+    <meta
+      name="description"
+      content="Visuaalisen viestinnän ja graafisen suunnittelun toimisto."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f8bdcf" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://latva.co/" />
+    <meta property="og:locale" content="fi_FI" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Latva" />
+    <meta property="og:url" content="https://latva.co/" />
+    <meta property="og:title" content="Latva - korkeatasoista visuaalista suunnittelua" />
+    <meta
+      property="og:description"
+      content="Visuaalisen viestinnän ja graafisen suunnittelun toimisto."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://latva.co/" />
+    <meta name="twitter:title" content="Latva - korkeatasoista visuaalista suunnittelua" />
+    <meta
+      name="twitter:description"
+      content="Visuaalisen viestinnän ja graafisen suunnittelun toimisto."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <title>Latva - korkeatasoista visuaalista suunnittelua</title>
     <style>
       :root {
         color: #453640;
-        font-family: Georgia, "Times New Roman", serif;
+        font-family: 'Lexend', sans-serif;
       }
 
       * {
@@ -25,14 +52,29 @@
         animation: drift 10s ease-in-out infinite alternate;
       }
 
+      .content {
+        padding: 1.5rem;
+        text-align: center;
+      }
+
       h1 {
         margin: 0;
-        padding: 0.8rem 1.25rem;
         font-size: clamp(3rem, 10vw, 7rem);
         font-weight: 400;
-        letter-spacing: 0;
+        letter-spacing: -0.035em;
         text-align: center;
         text-shadow: 0 2px 20px rgb(255 255 255 / 60%);
+      }
+
+      .contact {
+        margin: 1rem 0 0;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .contact a {
+        color: inherit;
+        text-underline-offset: 0.2em;
       }
 
       @keyframes drift {
@@ -53,6 +95,17 @@
     </style>
   </head>
   <body>
-    <h1>Lorem ipsum</h1>
+    <main class="content">
+      <h1>Tulossa pian</h1>
+      <p class="contact">Ota yhteyttä: <a id="contact-email"></a></p>
+    </main>
+    <script>
+      const contactEmail = String.fromCharCode(
+        101, 109, 109, 105, 64, 108, 97, 116, 118, 97, 46, 99, 111
+      );
+      const contactLink = document.getElementById("contact-email");
+      contactLink.href = `mailto:${contactEmail}`;
+      contactLink.textContent = contactEmail;
+    </script>
   </body>
 </html>
